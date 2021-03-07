@@ -26,9 +26,10 @@ jobs:
       - name: 📂 deploy
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
-          server: sl217.web.hostpoint.ch
+          server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./public/
-          server-dir: /home/domifo9/www/thoughtless.fortysix.ch/
+          # points to /home/domifo9/www/thoughtless.fortysix.ch/
+          server-dir: /
           dangerous-clean-slate: true
