@@ -1,7 +1,7 @@
 ---
-title: "The problem with Java Resource Bundles"
+title: "the problem with java resource bundles"
 date: 2021-03-04T17:45:24+01:00
-draft: true
+draft: false
 ---
 
 If you ever worked with java resource bundles (`PropertyResourceBundle`),
@@ -34,7 +34,7 @@ But there are a couple of things that can go wrong or are anoing:
 - pass the wrong number of parameters to the `MessageFormat`.
 - loading the resource bundle over and over again.
 
-## Ease handling of Java Resource Bundles
+## ease handling of java resource bundles
 
 Lets see how we can improve some of the points above..
 
@@ -97,7 +97,7 @@ but what if you could ensure the resource bundle is automatically reflected in y
 This is exaclty what Resource Bundle Processor does:
 It reads your resource bundle and generates a class that reflects all the messages from your bundle.
 
-## Resource Bundle Processor
+## resource bundle processor
 
 The Resource Bundle Processor is a small Java Annotation Processor (JSR-269) to generate a utility class to simplify the handling of resource bundles.
 
@@ -115,7 +115,7 @@ assertEquals("Hello John Doe", message);
 The generated class will have a method for each resource bundle key taking a locale and if the message contains placeholders (e.g. `Hello {0} {1}`),
 it also takes the exact same number of String arguments.
 
-## How To
+## how to
 
 Annotate a class with `@ResourceBundle` and tell it which bundle it should act on.
 e.g.:
@@ -165,11 +165,11 @@ This will result in the following generated method und resolve the order issue:
     }
 ```
 
-### Configuration
+### configuration
 
 More details about the configuration options can be found on the project documentation site: [resource-bundle-processor](https://github.com/imod/resource-bundle-gen)
 
-## Limitations
+## limitations
 
 - The current version only supports resource bundles in the form of properties files (no XML!).
 - A annotation processor is only triggered in case a java file changes, but the resource bundles actually are `properties`-files, therefore a compilation of the java class annotated with `@ResourceBundle` might need to be triggered in case the bundle file changes. e.g. `mvn clean verify`
