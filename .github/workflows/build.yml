@@ -32,4 +32,5 @@ jobs:
           local-dir: ./public/
           # points to /home/domifo9/www/thoughtless.fortysix.ch/
           server-dir: /
-          dangerous-clean-slate: true
+          # set to true to clean target directory before upload
+          dangerous-clean-slate: false
