@@ -173,5 +173,3 @@ More details about the configuration options can be found on the project documen
 
 - The current version only supports resource bundles in the form of properties files (no XML!).
 - A annotation processor is only triggered in case a java file changes, but the resource bundles actually are `properties`-files, therefore a compilation of the java class annotated with `@ResourceBundle` might need to be triggered in case the bundle file changes. e.g. `mvn clean verify`
-- The current version requires the default bundle to include all the messages,
-  all methods will be generated out of the entries of the default bundle.
