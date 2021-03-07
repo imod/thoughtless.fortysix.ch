@@ -99,7 +99,7 @@ It reads your resource bundle and generates a class that reflects all the messag
 
 ## resource bundle processor
 
-The Resource Bundle Processor is a small Java Annotation Processor (JSR-269) to generate a utility class to simplify the handling of resource bundles.
+The [Resource Bundle Processor](https://github.com/imod/resource-bundle-gen) is a small Java Annotation Processor (JSR-269) to generate a utility class to simplify the handling of resource bundles.
 
 With the genearated utility class (e.g. `ApplicationBundle`), the example from above would result in the following code:
 
