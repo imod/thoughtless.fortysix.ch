@@ -1,0 +1,4 @@
+baseURL = "http://thoughtless.fortysix.ch/"
+languageCode = "en-us"
+title = "thoughtless"
+theme = "kiss"
