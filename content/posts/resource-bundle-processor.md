@@ -167,6 +167,7 @@ This will result in the following generated method und resolve the order issue:
 
 ### configuration
 
+Resource Bundle Processor is [available on maven central](https://search.maven.org/search?q=a:resource-bundle-processor).
 More details about the configuration options can be found on the project documentation site: [resource-bundle-processor](https://github.com/imod/resource-bundle-gen)
 
 ## limitations
